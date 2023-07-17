@@ -18,6 +18,7 @@
 		BF0036462A63EBC400F4D533 /* FirstCeoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0036452A63EBC400F4D533 /* FirstCeoUITestsLaunchTests.swift */; };
 		BF0036582A63EDA300F4D533 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0036572A63EDA300F4D533 /* View+Extension.swift */; };
 		BF00365A2A63EDC000F4D533 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0036592A63EDC000F4D533 /* Color+Extension.swift */; };
+		BF00365C2A64E9DC00F4D533 /* NameQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00365B2A64E9DC00F4D533 /* NameQuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		BF0036452A63EBC400F4D533 /* FirstCeoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCeoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BF0036572A63EDA300F4D533 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		BF0036592A63EDC000F4D533 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		BF00365B2A64E9DC00F4D533 /* NameQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				BF0036232A63EBC300F4D533 /* ViewController.swift */,
+				BF00365B2A64E9DC00F4D533 /* NameQuestionViewController.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				BF00362A2A63EBC300F4D533 /* FirstCeo.xcdatamodeld in Sources */,
 				BF00365A2A63EDC000F4D533 /* Color+Extension.swift in Sources */,
 				BF0036242A63EBC300F4D533 /* ViewController.swift in Sources */,
+				BF00365C2A64E9DC00F4D533 /* NameQuestionViewController.swift in Sources */,
 				BF0036582A63EDA300F4D533 /* View+Extension.swift in Sources */,
 				BF0036202A63EBC300F4D533 /* AppDelegate.swift in Sources */,
 				BF0036222A63EBC300F4D533 /* SceneDelegate.swift in Sources */,
