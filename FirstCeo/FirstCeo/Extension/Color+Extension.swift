@@ -34,4 +34,8 @@ extension UIColor {
     static var pointNavy: UIColor {
         return UIColor(rgb: 0x183670)
     }
+    
+    static var backgroundNavy: UIColor {
+        return UIColor(rgb: 0xC0CDE8)
+    }
 }
