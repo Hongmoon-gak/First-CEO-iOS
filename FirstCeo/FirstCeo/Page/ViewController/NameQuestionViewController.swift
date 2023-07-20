@@ -45,6 +45,12 @@ final class NameQuestionViewController: UIViewController {
     private func setLabel() {
         questionLabel.setLabel(labelText: "사업장 이름은 무엇인가요?", isBold: true, textSize: 24, labelColor: .black)
     }
+    
+    @objc func nextButtonTapped() {
+        let kindQuestionViewController = KindQuestionViewController()
+        self.navigationController?.pushViewController(kindQuestionViewController, animated: true)
+    }
+    
     private func configureLayout() {
         progressView.anchor(top: view.topAnchor,
                             leading: view.leadingAnchor,
@@ -84,5 +90,7 @@ extension NameQuestionViewController {
     private func setButton() {
         nextButton.roundedNextButton(title: "다음", titleSize: 24, titleColor: .white, backgroundColor: .pointNavy)
         nextButton.makeRounded()
+        
+        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
 }
