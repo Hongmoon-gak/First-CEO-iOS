@@ -19,6 +19,8 @@
 		BF0036582A63EDA300F4D533 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0036572A63EDA300F4D533 /* View+Extension.swift */; };
 		BF00365A2A63EDC000F4D533 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0036592A63EDC000F4D533 /* Color+Extension.swift */; };
 		BF00365C2A64E9DC00F4D533 /* NameQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00365B2A64E9DC00F4D533 /* NameQuestionViewController.swift */; };
+		BF00365E2A67B54300F4D533 /* Label+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00365D2A67B54300F4D533 /* Label+Extension.swift */; };
+		BF0036612A67E50100F4D533 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0036602A67E50100F4D533 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		BF0036572A63EDA300F4D533 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		BF0036592A63EDC000F4D533 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		BF00365B2A64E9DC00F4D533 /* NameQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameQuestionViewController.swift; sourceTree = "<group>"; };
+		BF00365D2A67B54300F4D533 /* Label+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label+Extension.swift"; sourceTree = "<group>"; };
+		BF0036602A67E50100F4D533 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,7 @@
 		BF0036542A63EC3400F4D533 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				BF00365F2A67E4F000F4D533 /* View */,
 				BF0036232A63EBC300F4D533 /* ViewController.swift */,
 				BF00365B2A64E9DC00F4D533 /* NameQuestionViewController.swift */,
 			);
@@ -172,8 +177,17 @@
 			children = (
 				BF0036572A63EDA300F4D533 /* View+Extension.swift */,
 				BF0036592A63EDC000F4D533 /* Color+Extension.swift */,
+				BF00365D2A67B54300F4D533 /* Label+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BF00365F2A67E4F000F4D533 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF0036602A67E50100F4D533 /* CustomButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,7 +320,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF00365E2A67B54300F4D533 /* Label+Extension.swift in Sources */,
 				BF00362A2A63EBC300F4D533 /* FirstCeo.xcdatamodeld in Sources */,
+				BF0036612A67E50100F4D533 /* CustomButton.swift in Sources */,
 				BF00365A2A63EDC000F4D533 /* Color+Extension.swift in Sources */,
 				BF0036242A63EBC300F4D533 /* ViewController.swift in Sources */,
 				BF00365C2A64E9DC00F4D533 /* NameQuestionViewController.swift in Sources */,
