@@ -26,9 +26,12 @@ extension UIColor {
 }
 
 extension UIColor {
-    /* 사용 예시
-    static var customSelectedGreen: UIColor {
-        return UIColor(rgb: 0x1C6974)
+    /// 배경 회색
+    static var backgroundGray: UIColor {
+        return UIColor(rgb: 0xF6F6F6)
     }
-     */
+    
+    static var pointNavy: UIColor {
+        return UIColor(rgb: 0x183670)
+    }
 }
