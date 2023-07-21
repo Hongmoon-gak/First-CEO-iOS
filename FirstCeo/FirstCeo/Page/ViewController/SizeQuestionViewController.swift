@@ -92,12 +92,18 @@ final class SizeQuestionViewController: UIViewController {
         progressView.setHeight(height: 16)
         nextButton.setHeight(height: 72)
     }
+    
+    @objc func nextButtonTapped() {
+        let profitQuestiosnViewController = ProfitQuestionViewController()
+        self.navigationController?.pushViewController(profitQuestiosnViewController, animated: true)
+    }
 }
 
 extension SizeQuestionViewController {
     private func setButton() {
         nextButton.roundedNextButton(title: "다음", titleSize: 24, titleColor: .white, backgroundColor: .pointNavy)
         nextButton.makeRounded()
+        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
 }
 
