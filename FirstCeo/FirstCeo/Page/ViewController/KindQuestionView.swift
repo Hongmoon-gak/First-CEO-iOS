@@ -57,6 +57,11 @@ final class KindQuestionViewController: UIViewController {
         
     }
     
+    @objc func nextButtonTapped() {
+        let sizeQuestionViewController = SizeQuestionViewController()
+        self.navigationController?.pushViewController(sizeQuestionViewController, animated: true)
+    }
+    
     private func setLabel() {
         questionLabel.setLabel(labelText: "어떤 종류의 사업장인가요?", isBold: true, textSize: 24, labelColor: .black)
     }
@@ -99,6 +104,7 @@ extension KindQuestionViewController {
     private func setButton() {
         nextButton.roundedNextButton(title: "다음", titleSize: 24, titleColor: .white, backgroundColor: .pointNavy)
         nextButton.makeRounded()
+        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
 }
 
