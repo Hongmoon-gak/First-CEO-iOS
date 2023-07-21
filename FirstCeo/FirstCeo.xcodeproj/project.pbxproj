@@ -27,6 +27,9 @@
 		BF00366D2A6950B300F4D533 /* SizeQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00366C2A6950B300F4D533 /* SizeQuestionViewController.swift */; };
 		BF00366F2A69568200F4D533 /* SizeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00366E2A69568200F4D533 /* SizeCollectionViewCell.swift */; };
 		BF0036712A6A4B9100F4D533 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0036702A6A4B9100F4D533 /* Size.swift */; };
+		BF0036732A6A55E900F4D533 /* ProfitQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0036722A6A55E900F4D533 /* ProfitQuestionViewController.swift */; };
+		BF0036752A6A56A200F4D533 /* Profit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0036742A6A56A200F4D533 /* Profit.swift */; };
+		BF0036772A6A579900F4D533 /* ProfitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0036762A6A579900F4D533 /* ProfitCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		BF00366C2A6950B300F4D533 /* SizeQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeQuestionViewController.swift; sourceTree = "<group>"; };
 		BF00366E2A69568200F4D533 /* SizeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF0036702A6A4B9100F4D533 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		BF0036722A6A55E900F4D533 /* ProfitQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitQuestionViewController.swift; sourceTree = "<group>"; };
+		BF0036742A6A56A200F4D533 /* Profit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profit.swift; sourceTree = "<group>"; };
+		BF0036762A6A579900F4D533 /* ProfitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +207,7 @@
 				BF0036602A67E50100F4D533 /* CustomButton.swift */,
 				BF0036682A6908F000F4D533 /* KindCollectionViewCell.swift */,
 				BF00366E2A69568200F4D533 /* SizeCollectionViewCell.swift */,
+				BF0036762A6A579900F4D533 /* ProfitCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +218,7 @@
 				BF00365B2A64E9DC00F4D533 /* NameQuestionViewController.swift */,
 				BF0036632A69079200F4D533 /* KindQuestionViewController.swift */,
 				BF00366C2A6950B300F4D533 /* SizeQuestionViewController.swift */,
+				BF0036722A6A55E900F4D533 /* ProfitQuestionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 			children = (
 				BF0036662A69084D00F4D533 /* Category.swift */,
 				BF0036702A6A4B9100F4D533 /* Size.swift */,
+				BF0036742A6A56A200F4D533 /* Profit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -362,12 +371,15 @@
 				BF0036672A69084D00F4D533 /* Category.swift in Sources */,
 				BF00365A2A63EDC000F4D533 /* Color+Extension.swift in Sources */,
 				BF00366F2A69568200F4D533 /* SizeCollectionViewCell.swift in Sources */,
+				BF0036732A6A55E900F4D533 /* ProfitQuestionViewController.swift in Sources */,
 				BF00366D2A6950B300F4D533 /* SizeQuestionViewController.swift in Sources */,
 				BF00366B2A690A2C00F4D533 /* Literal.swift in Sources */,
 				BF00365C2A64E9DC00F4D533 /* NameQuestionViewController.swift in Sources */,
 				BF0036582A63EDA300F4D533 /* View+Extension.swift in Sources */,
 				BF0036202A63EBC300F4D533 /* AppDelegate.swift in Sources */,
+				BF0036772A6A579900F4D533 /* ProfitCollectionViewCell.swift in Sources */,
 				BF0036642A69079200F4D533 /* KindQuestionViewController.swift in Sources */,
+				BF0036752A6A56A200F4D533 /* Profit.swift in Sources */,
 				BF0036222A63EBC300F4D533 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
