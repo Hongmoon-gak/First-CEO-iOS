@@ -176,8 +176,7 @@
 		BF0036542A63EC3400F4D533 /* Page */ = {
 			isa = PBXGroup;
 			children = (
-				BF0036622A69078100F4D533 /* ViewController */,
-				BF00365F2A67E4F000F4D533 /* View */,
+				BF0036782A6A756F00F4D533 /* InformationFlow */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -231,6 +230,15 @@
 				BF0036742A6A56A200F4D533 /* Profit.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BF0036782A6A756F00F4D533 /* InformationFlow */ = {
+			isa = PBXGroup;
+			children = (
+				BF0036622A69078100F4D533 /* ViewController */,
+				BF00365F2A67E4F000F4D533 /* View */,
+			);
+			path = InformationFlow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
