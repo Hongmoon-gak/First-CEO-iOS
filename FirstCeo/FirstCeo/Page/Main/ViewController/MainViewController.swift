@@ -29,6 +29,21 @@ class MainViewController: UIViewController {
     private var nameLabel = UILabel()
     private var lawLabel = UILabel()
     
+    private lazy var lawCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = UIScreen.main.bounds.width / 19.5
+        layout.minimumLineSpacing = UIScreen.main.bounds.width / 19.5
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(KindCollectionViewCell.self, forCellWithReuseIdentifier: KindCollectionViewCell.reuseIdentifier)
+        collectionView.backgroundColor = .clear
+        collectionView.showsHorizontalScrollIndicator = true
+        collectionView.alwaysBounceHorizontal = true
+    
+        return collectionView
+    }()
     
     // MARK: - Life Cycles
     
@@ -105,3 +120,32 @@ class MainViewController: UIViewController {
     }
 }
 
+extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return laws.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KindCollectionViewCell.reuseIdentifier, for: indexPath) as? KindCollectionViewCell else { return UICollectionViewCell() }
+        
+        cell.categoryLabel.text = laws[indexPath.row].name
+        cell.backgroundColor = .white
+        cell.layer.cornerRadius = 15
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let anchorSpacing = (screenWidth / 18.57) * 2
+        let insetSpacing = (screenWidth / 19.5) * 2
+        let collectionViewCellWidth = screenWidth - anchorSpacing - insetSpacing
+        return CGSize(width: collectionViewCellWidth / 3, height: collectionViewCellWidth / 3)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? KindCollectionViewCell {
+            
+            // TODO: 해당 법령 페이지로 넘어가도록 구현
+        }
+    }
+}
