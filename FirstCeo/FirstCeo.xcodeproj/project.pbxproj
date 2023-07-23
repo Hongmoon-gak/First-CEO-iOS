@@ -30,6 +30,10 @@
 		BF0036732A6A55E900F4D533 /* ProfitQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0036722A6A55E900F4D533 /* ProfitQuestionViewController.swift */; };
 		BF0036752A6A56A200F4D533 /* Profit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0036742A6A56A200F4D533 /* Profit.swift */; };
 		BF0036772A6A579900F4D533 /* ProfitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0036762A6A579900F4D533 /* ProfitCollectionViewCell.swift */; };
+		BF00367C2A6A764B00F4D533 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00367B2A6A764B00F4D533 /* MainViewController.swift */; };
+		BF00367E2A6CF2A700F4D533 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00367D2A6CF2A700F4D533 /* CustomView.swift */; };
+		BF0036802A6D3A1000F4D533 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00367F2A6D3A1000F4D533 /* DividerView.swift */; };
+		BF0036822A6D44FD00F4D533 /* Law.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0036812A6D44FD00F4D533 /* Law.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,10 @@
 		BF0036722A6A55E900F4D533 /* ProfitQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitQuestionViewController.swift; sourceTree = "<group>"; };
 		BF0036742A6A56A200F4D533 /* Profit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profit.swift; sourceTree = "<group>"; };
 		BF0036762A6A579900F4D533 /* ProfitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF00367B2A6A764B00F4D533 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BF00367D2A6CF2A700F4D533 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		BF00367F2A6D3A1000F4D533 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		BF0036812A6D44FD00F4D533 /* Law.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Law.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +184,10 @@
 		BF0036542A63EC3400F4D533 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				BF0036792A6A759300F4D533 /* Main */,
 				BF0036782A6A756F00F4D533 /* InformationFlow */,
+				BF00367D2A6CF2A700F4D533 /* CustomView.swift */,
+				BF00367F2A6D3A1000F4D533 /* DividerView.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -228,6 +239,7 @@
 				BF0036662A69084D00F4D533 /* Category.swift */,
 				BF0036702A6A4B9100F4D533 /* Size.swift */,
 				BF0036742A6A56A200F4D533 /* Profit.swift */,
+				BF0036812A6D44FD00F4D533 /* Law.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,6 +251,22 @@
 				BF00365F2A67E4F000F4D533 /* View */,
 			);
 			path = InformationFlow;
+			sourceTree = "<group>";
+		};
+		BF0036792A6A759300F4D533 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BF00367A2A6A763C00F4D533 /* ViewController */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BF00367A2A6A763C00F4D533 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BF00367B2A6A764B00F4D533 /* MainViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,15 +404,19 @@
 				BF00365E2A67B54300F4D533 /* Label+Extension.swift in Sources */,
 				BF00362A2A63EBC300F4D533 /* FirstCeo.xcdatamodeld in Sources */,
 				BF0036612A67E50100F4D533 /* CustomButton.swift in Sources */,
+				BF00367E2A6CF2A700F4D533 /* CustomView.swift in Sources */,
+				BF00367C2A6A764B00F4D533 /* MainViewController.swift in Sources */,
 				BF0036672A69084D00F4D533 /* Category.swift in Sources */,
 				BF00365A2A63EDC000F4D533 /* Color+Extension.swift in Sources */,
 				BF00366F2A69568200F4D533 /* SizeCollectionViewCell.swift in Sources */,
+				BF0036822A6D44FD00F4D533 /* Law.swift in Sources */,
 				BF0036732A6A55E900F4D533 /* ProfitQuestionViewController.swift in Sources */,
 				BF00366D2A6950B300F4D533 /* SizeQuestionViewController.swift in Sources */,
 				BF00366B2A690A2C00F4D533 /* Literal.swift in Sources */,
 				BF00365C2A64E9DC00F4D533 /* NameQuestionViewController.swift in Sources */,
 				BF0036582A63EDA300F4D533 /* View+Extension.swift in Sources */,
 				BF0036202A63EBC300F4D533 /* AppDelegate.swift in Sources */,
+				BF0036802A6D3A1000F4D533 /* DividerView.swift in Sources */,
 				BF0036772A6A579900F4D533 /* ProfitCollectionViewCell.swift in Sources */,
 				BF0036642A69079200F4D533 /* KindQuestionViewController.swift in Sources */,
 				BF0036752A6A56A200F4D533 /* Profit.swift in Sources */,
@@ -564,7 +596,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -595,7 +627,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
