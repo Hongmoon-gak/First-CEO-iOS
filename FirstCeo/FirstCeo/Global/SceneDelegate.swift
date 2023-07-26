@@ -10,14 +10,26 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    let rootViewController = NameQuestionViewController()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        var rootViewController = UIViewController()
+        let nameQuestionViewController = NameQuestionViewController()
+        let mainViewController = MainViewController()
+        
+        let isRegisteredUserDefaults = UserDefaults.standard.bool(forKey: "isRegistered") as Bool
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
+        
+        if isRegisteredUserDefaults {
+            rootViewController = mainViewController
+        } else {
+            rootViewController = nameQuestionViewController
+        }
+
         window?.rootViewController = UINavigationController(rootViewController: rootViewController)
     }
 

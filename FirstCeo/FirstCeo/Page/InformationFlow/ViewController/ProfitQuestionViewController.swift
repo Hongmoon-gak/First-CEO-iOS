@@ -56,6 +56,13 @@ final class ProfitQuestionViewController: UIViewController {
         
     }
     
+    @objc func startButtonTapped() {
+        let mainViewController = MainViewController()
+        self.navigationController?.pushViewController(mainViewController, animated: true)
+        UserDefaults.standard.set(true, forKey: "isRegistered")
+        
+    }
+    
     private func setLabel() {
         questionLabel.setLabel(labelText: "매출액 규모는 어느정도인가요?", isBold: true, textSize: 24, labelColor: .black)
     }
@@ -98,6 +105,7 @@ extension ProfitQuestionViewController {
     private func setButton() {
         nextButton.roundedNextButton(title: "첫사장 시작하기", titleSize: 24, titleColor: .white, backgroundColor: .pointNavy)
         nextButton.makeRounded()
+        nextButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
     }
 }
 

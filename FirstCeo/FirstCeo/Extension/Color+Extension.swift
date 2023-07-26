@@ -38,4 +38,8 @@ extension UIColor {
     static var backgroundNavy: UIColor {
         return UIColor(rgb: 0xC0CDE8)
     }
+    
+    static var dividerGraycolor: UIColor {
+        return UIColor(rgb: 0xC3C3C3)
+    }
 }
