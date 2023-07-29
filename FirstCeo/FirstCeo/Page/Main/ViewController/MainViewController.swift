@@ -115,8 +115,8 @@ class MainViewController: UIViewController {
     }
     
     private func setLabel() {
-        nameLabel.setLabel(labelText: "홍문치킨 사장님!", isBold: true, textSize: 24, labelColor: .black)
-        lawLabel.setLabel(labelText: "관련 법령 찾아보기", isBold: true, textSize: 20, labelColor: .black)
+        nameLabel.setLabel(labelText: "홍문치킨 사장님!", backgroundColor: .clear, weight: .semibold, textSize: 24, labelColor: .black)
+        lawLabel.setLabel(labelText: "관련 법령 찾아보기", backgroundColor: .clear, weight: .semibold, textSize: 24, labelColor: .black)
     }
 }
 

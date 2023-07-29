@@ -57,7 +57,8 @@ final class SizeQuestionViewController: UIViewController {
     }
     
     private func setLabel() {
-        questionLabel.setLabel(labelText: "사업장의 규모를 선택해주세요", isBold: true, textSize: 24, labelColor: .black)
+        questionLabel.setLabel(labelText: "사업장 규모를 선택해주세요", backgroundColor: .white, weight: .semibold, textSize: 24, labelColor: .black)
+        
     }
     private func configureLayout() {
         progressView.anchor(top: view.topAnchor,

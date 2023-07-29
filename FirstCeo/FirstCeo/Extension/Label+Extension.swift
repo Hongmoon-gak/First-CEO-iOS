@@ -9,13 +9,10 @@ import UIKit
 
 extension UILabel {
     
-    func setLabel(labelText: String, isBold: Bool, textSize: Int, labelColor: UIColor) {
+    func setLabel(labelText: String, backgroundColor: UIColor, weight: UIFont.Weight, textSize: Int, labelColor: UIColor) {
         self.text = labelText
-        if isBold {
-            self.font = .systemFont(ofSize: CGFloat(textSize), weight: .semibold)
-        } else {
-            self.font = .systemFont(ofSize: CGFloat(textSize), weight: .regular)
-        }
+        self.backgroundColor = backgroundColor
+        self.font = .systemFont(ofSize: CGFloat(textSize), weight: weight)
         self.textColor = labelColor
     }
 }

@@ -63,7 +63,7 @@ final class KindQuestionViewController: UIViewController {
     }
     
     private func setLabel() {
-        questionLabel.setLabel(labelText: "어떤 종류의 사업장인가요?", isBold: true, textSize: 24, labelColor: .black)
+        questionLabel.setLabel(labelText: "어떤 종류의 사업장인가요?", backgroundColor: .clear, weight: .semibold, textSize: 24, labelColor: .black)
     }
     private func configureLayout() {
         progressView.anchor(top: view.topAnchor,

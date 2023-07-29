@@ -43,7 +43,7 @@ final class NameQuestionViewController: UIViewController {
     }
     
     private func setLabel() {
-        questionLabel.setLabel(labelText: "사업장 이름은 무엇인가요?", isBold: true, textSize: 24, labelColor: .black)
+        questionLabel.setLabel(labelText: "사업장 이름은 무엇인가요?", backgroundColor: .clear, weight: .semibold, textSize: 24, labelColor: .black)
     }
     
     @objc func nextButtonTapped() {
