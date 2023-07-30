@@ -52,7 +52,9 @@ class CustomView: UIView {
         backgroundColor = .white
         layer.cornerRadius = 15
         clipsToBounds = true
-        setHeight(height: 175)
+        setHeight(height: 165)
+        
+        self.setShadow(offset: CGSize(), color: .black, radius: 5, opacity: 0.1)
         
         [titleLabel, contentLabel, iconImageView, chevronImageView].forEach { addSubview($0) }
         titleLabel.textColor = .black
