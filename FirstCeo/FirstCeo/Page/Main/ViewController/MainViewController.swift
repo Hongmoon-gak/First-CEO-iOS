@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     
     var diagnosisView = CustomView()
     var informationView = CustomView()
-    private lazy var divider = DividerView().drawHorizontalDividerView(height: 0.3, color: .dividerGraycolor)
+    private lazy var divider = DividerView().drawHorizontalDividerView(height: 7, color: .dividerGraycolor)
     
     private var helloLabel: UILabel = {
        let label = UILabel()
@@ -27,18 +27,18 @@ class MainViewController: UIViewController {
     }()
 
     private var nameLabel = UILabel()
-    private var lawLabel = UILabel()
     
     private lazy var lawCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.scrollDirection = .horizontal
-        layout.minimumInteritemSpacing = UIScreen.main.bounds.width / 19.5
-        layout.minimumLineSpacing = UIScreen.main.bounds.width / 19.5
+        layout.sectionInset = UIEdgeInsets(top: 30, left: 20, bottom: 30, right: 20)
+        layout.minimumInteritemSpacing = 20
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(KindCollectionViewCell.self, forCellWithReuseIdentifier: KindCollectionViewCell.reuseIdentifier)
-        collectionView.backgroundColor = .clear
+        collectionView.register(LawCollectionViewCell.self, forCellWithReuseIdentifier: LawCollectionViewCell.reuseIdentifier)
+        collectionView.register(CustomHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CustomHeaderView.reuseIdentifier)
+        collectionView.backgroundColor = .white
+        collectionView.layer.cornerRadius = 16
+        collectionView.clipsToBounds = true
         collectionView.showsHorizontalScrollIndicator = true
         collectionView.alwaysBounceHorizontal = true
     
@@ -52,7 +52,7 @@ class MainViewController: UIViewController {
         view.backgroundColor = .backgroundGray
         configureCustomView()
         setLabel()
-        [helloLabel, nameLabel, diagnosisView, informationView, divider, lawLabel, lawCollectionView].forEach { view.addSubview($0) }
+        [helloLabel, nameLabel, diagnosisView, informationView, divider, lawCollectionView].forEach { view.addSubview($0) }
         configureLayout()
         lawCollectionView.dataSource = self
         lawCollectionView.delegate = self
@@ -100,23 +100,23 @@ class MainViewController: UIViewController {
                        trailing: view.trailingAnchor,
                        paddingTop: 30)
         
-        lawLabel.anchor(top: divider.bottomAnchor,
-                        leading: view.leadingAnchor,
-                        paddingTop: 24,
-                        paddingLeading: 16)
+//        lawLabel.anchor(top: divider.bottomAnchor,
+//                        leading: view.leadingAnchor,
+//                        paddingTop: 24,
+//                        paddingLeading: 16)
         
-        lawCollectionView.anchor(top: lawLabel.bottomAnchor,
+        lawCollectionView.anchor(top: divider.bottomAnchor,
                                  leading: view.leadingAnchor,
                                  trailing: view.trailingAnchor,
                                  paddingTop: 30,
                                  paddingLeading: 16,
                                  paddingTrailing: 16)
-        lawCollectionView.setHeight(height: 100)
+        lawCollectionView.setHeight(height: 200)
     }
     
     private func setLabel() {
         nameLabel.setLabel(labelText: "홍문치킨 사장님!", backgroundColor: .clear, weight: .semibold, textSize: 24, labelColor: .black)
-        lawLabel.setLabel(labelText: "관련 법령 찾아보기", backgroundColor: .clear, weight: .semibold, textSize: 24, labelColor: .black)
+//        lawLabel.setLabel(labelText: "관련 법령 찾아보기", backgroundColor: .clear, weight: .semibold, textSize: 24, labelColor: .black)
     }
 }
 
@@ -127,25 +127,40 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KindCollectionViewCell.reuseIdentifier, for: indexPath) as? KindCollectionViewCell else { return UICollectionViewCell() }
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LawCollectionViewCell.reuseIdentifier, for: indexPath) as? LawCollectionViewCell else { return UICollectionViewCell() }
         
         cell.categoryLabel.text = laws[indexPath.row].name
+        cell.categoryImageView.image = UIImage(named: laws[indexPath.row].imageName)
         cell.backgroundColor = .white
         cell.layer.cornerRadius = 15
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let anchorSpacing = (screenWidth / 18.57) * 2
-        let insetSpacing = (screenWidth / 19.5) * 2
-        let collectionViewCellWidth = screenWidth - anchorSpacing - insetSpacing
-        return CGSize(width: collectionViewCellWidth / 3, height: collectionViewCellWidth / 3)
+        let cellWidth = 60.0
+        let cellHeight = 85.0
+        return CGSize(width: cellWidth, height: cellHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? KindCollectionViewCell {
+        if let cell = collectionView.cellForItem(at: indexPath) as? LawCollectionViewCell {
             
             // TODO: 해당 법령 페이지로 넘어가도록 구현
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+
+        return CGSize(width: screenWidth, height: 40)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CustomHeaderView.reuseIdentifier, for: indexPath) as? CustomHeaderView else {
+            return CustomHeaderView() }
+        header.configureLayout()
+        return header
     }
 }
