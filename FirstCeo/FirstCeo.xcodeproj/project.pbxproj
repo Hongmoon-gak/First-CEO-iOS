@@ -34,6 +34,8 @@
 		BF00367E2A6CF2A700F4D533 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00367D2A6CF2A700F4D533 /* CustomView.swift */; };
 		BF0036802A6D3A1000F4D533 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF00367F2A6D3A1000F4D533 /* DividerView.swift */; };
 		BF0036822A6D44FD00F4D533 /* Law.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0036812A6D44FD00F4D533 /* Law.swift */; };
+		BFE4F3D12A74D2000053012E /* LawCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4F3D02A74D2000053012E /* LawCollectionViewCell.swift */; };
+		BFE4F3D42A74F3E40053012E /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4F3D32A74F3E40053012E /* CustomHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		BF00367D2A6CF2A700F4D533 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		BF00367F2A6D3A1000F4D533 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 		BF0036812A6D44FD00F4D533 /* Law.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Law.swift; sourceTree = "<group>"; };
+		BFE4F3D02A74D2000053012E /* LawCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawCollectionViewCell.swift; sourceTree = "<group>"; };
+		BFE4F3D32A74F3E40053012E /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +260,7 @@
 		BF0036792A6A759300F4D533 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				BFE4F3D22A74D71B0053012E /* View */,
 				BF00367A2A6A763C00F4D533 /* ViewController */,
 			);
 			path = Main;
@@ -267,6 +272,15 @@
 				BF00367B2A6A764B00F4D533 /* MainViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BFE4F3D22A74D71B0053012E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFE4F3D02A74D2000053012E /* LawCollectionViewCell.swift */,
+				BFE4F3D32A74F3E40053012E /* CustomHeaderView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +418,7 @@
 				BF00365E2A67B54300F4D533 /* Label+Extension.swift in Sources */,
 				BF00362A2A63EBC300F4D533 /* FirstCeo.xcdatamodeld in Sources */,
 				BF0036612A67E50100F4D533 /* CustomButton.swift in Sources */,
+				BFE4F3D12A74D2000053012E /* LawCollectionViewCell.swift in Sources */,
 				BF00367E2A6CF2A700F4D533 /* CustomView.swift in Sources */,
 				BF00367C2A6A764B00F4D533 /* MainViewController.swift in Sources */,
 				BF0036672A69084D00F4D533 /* Category.swift in Sources */,
@@ -414,6 +429,7 @@
 				BF00366D2A6950B300F4D533 /* SizeQuestionViewController.swift in Sources */,
 				BF00366B2A690A2C00F4D533 /* Literal.swift in Sources */,
 				BF00365C2A64E9DC00F4D533 /* NameQuestionViewController.swift in Sources */,
+				BFE4F3D42A74F3E40053012E /* CustomHeaderView.swift in Sources */,
 				BF0036582A63EDA300F4D533 /* View+Extension.swift in Sources */,
 				BF0036202A63EBC300F4D533 /* AppDelegate.swift in Sources */,
 				BF0036802A6D3A1000F4D533 /* DividerView.swift in Sources */,
