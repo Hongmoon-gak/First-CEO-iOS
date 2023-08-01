@@ -100,11 +100,6 @@ class MainViewController: UIViewController {
                        trailing: view.trailingAnchor,
                        paddingTop: 30)
         
-//        lawLabel.anchor(top: divider.bottomAnchor,
-//                        leading: view.leadingAnchor,
-//                        paddingTop: 24,
-//                        paddingLeading: 16)
-        
         lawCollectionView.anchor(top: divider.bottomAnchor,
                                  leading: view.leadingAnchor,
                                  trailing: view.trailingAnchor,
@@ -116,7 +111,6 @@ class MainViewController: UIViewController {
     
     private func setLabel() {
         nameLabel.setLabel(labelText: "홍문치킨 사장님!", backgroundColor: .clear, weight: .semibold, textSize: 24, labelColor: .black)
-//        lawLabel.setLabel(labelText: "관련 법령 찾아보기", backgroundColor: .clear, weight: .semibold, textSize: 24, labelColor: .black)
     }
 }
 
@@ -146,8 +140,11 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? LawCollectionViewCell {
-            
             // TODO: 해당 법령 페이지로 넘어가도록 구현
+            if indexPath.row == 0 {
+                let segmentedControlViewController = SegmentedControlViewController()
+                navigationController?.pushViewController(segmentedControlViewController, animated: true)
+            }
         }
     }
     
