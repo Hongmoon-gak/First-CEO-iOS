@@ -37,6 +37,9 @@
 		BFE4F3D12A74D2000053012E /* LawCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4F3D02A74D2000053012E /* LawCollectionViewCell.swift */; };
 		BFE4F3D42A74F3E40053012E /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4F3D32A74F3E40053012E /* CustomHeaderView.swift */; };
 		BFE4F3D62A7610AD0053012E /* Shadow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4F3D52A7610AD0053012E /* Shadow+Extension.swift */; };
+		BFE4F3D92A7614AF0053012E /* SegmentedControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4F3D82A7614AF0053012E /* SegmentedControlViewController.swift */; };
+		BFE4F3DB2A7753640053012E /* InsuranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4F3DA2A7753640053012E /* InsuranceView.swift */; };
+		BFE4F3DF2A777D380053012E /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4F3DE2A777D380053012E /* Image+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		BFE4F3D02A74D2000053012E /* LawCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawCollectionViewCell.swift; sourceTree = "<group>"; };
 		BFE4F3D32A74F3E40053012E /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
 		BFE4F3D52A7610AD0053012E /* Shadow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shadow+Extension.swift"; sourceTree = "<group>"; };
+		BFE4F3D82A7614AF0053012E /* SegmentedControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlViewController.swift; sourceTree = "<group>"; };
+		BFE4F3DA2A7753640053012E /* InsuranceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceView.swift; sourceTree = "<group>"; };
+		BFE4F3DE2A777D380053012E /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +196,8 @@
 		BF0036542A63EC3400F4D533 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				BFE4F3D82A7614AF0053012E /* SegmentedControlViewController.swift */,
+				BFE4F3D72A76149C0053012E /* Insurance */,
 				BF0036792A6A759300F4D533 /* Main */,
 				BF0036782A6A756F00F4D533 /* InformationFlow */,
 				BF00367D2A6CF2A700F4D533 /* CustomView.swift */,
@@ -214,6 +222,7 @@
 				BF0036592A63EDC000F4D533 /* Color+Extension.swift */,
 				BF00365D2A67B54300F4D533 /* Label+Extension.swift */,
 				BFE4F3D52A7610AD0053012E /* Shadow+Extension.swift */,
+				BFE4F3DE2A777D380053012E /* Image+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -284,6 +293,14 @@
 				BFE4F3D32A74F3E40053012E /* CustomHeaderView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BFE4F3D72A76149C0053012E /* Insurance */ = {
+			isa = PBXGroup;
+			children = (
+				BFE4F3DA2A7753640053012E /* InsuranceView.swift */,
+			);
+			path = Insurance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,6 +440,7 @@
 				BF0036612A67E50100F4D533 /* CustomButton.swift in Sources */,
 				BFE4F3D12A74D2000053012E /* LawCollectionViewCell.swift in Sources */,
 				BF00367E2A6CF2A700F4D533 /* CustomView.swift in Sources */,
+				BFE4F3DF2A777D380053012E /* Image+Extension.swift in Sources */,
 				BF00367C2A6A764B00F4D533 /* MainViewController.swift in Sources */,
 				BF0036672A69084D00F4D533 /* Category.swift in Sources */,
 				BF00365A2A63EDC000F4D533 /* Color+Extension.swift in Sources */,
@@ -438,7 +456,9 @@
 				BF0036802A6D3A1000F4D533 /* DividerView.swift in Sources */,
 				BF0036772A6A579900F4D533 /* ProfitCollectionViewCell.swift in Sources */,
 				BF0036642A69079200F4D533 /* KindQuestionViewController.swift in Sources */,
+				BFE4F3DB2A7753640053012E /* InsuranceView.swift in Sources */,
 				BF0036752A6A56A200F4D533 /* Profit.swift in Sources */,
+				BFE4F3D92A7614AF0053012E /* SegmentedControlViewController.swift in Sources */,
 				BFE4F3D62A7610AD0053012E /* Shadow+Extension.swift in Sources */,
 				BF0036222A63EBC300F4D533 /* SceneDelegate.swift in Sources */,
 			);
