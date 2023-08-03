@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import WebKit
 
 class SegmentedControlViewController: UIViewController {
     
     // MARK: - Properties
+    var webView = WKWebView()
     
     private var segmentedControl: UISegmentedControl = {
         let itemNames = Law.laws.map { $0.name }
@@ -48,7 +50,6 @@ class SegmentedControlViewController: UIViewController {
         return scrollView
     }()
     
-    
     private lazy var insuranceView = InsuranceView()
     
     // MARK: - Life Cycles
@@ -57,7 +58,13 @@ class SegmentedControlViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         [segmentedControl, scrollView].forEach { view.addSubview($0) }
+        
+        insuranceView.delegate = self
         scrollView.addSubview(insuranceView)
+        
+        webView.frame = view.bounds
+        webView.isHidden = true
+        view.addSubview(webView)
         configureLayout()
     }
     
@@ -107,6 +114,16 @@ class SegmentedControlViewController: UIViewController {
                 break
             default:
                 break
+        }
+    }
+}
+
+extension SegmentedControlViewController: CustomViewDelegate {
+    func didTapButtonInUIView() {
+        if let url = URL(string: calculatorURL) {
+            let request = URLRequest(url: url)
+            webView.isHidden = false
+            webView.load(request)
         }
     }
 }
