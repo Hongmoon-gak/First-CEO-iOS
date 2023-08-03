@@ -40,6 +40,7 @@
 		BFE4F3D92A7614AF0053012E /* SegmentedControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4F3D82A7614AF0053012E /* SegmentedControlViewController.swift */; };
 		BFE4F3DB2A7753640053012E /* InsuranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4F3DA2A7753640053012E /* InsuranceView.swift */; };
 		BFE4F3DF2A777D380053012E /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4F3DE2A777D380053012E /* Image+Extension.swift */; };
+		BFEFAA922A7B56650038511C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEFAA912A7B56650038511C /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		BFE4F3D82A7614AF0053012E /* SegmentedControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlViewController.swift; sourceTree = "<group>"; };
 		BFE4F3DA2A7753640053012E /* InsuranceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceView.swift; sourceTree = "<group>"; };
 		BFE4F3DE2A777D380053012E /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
+		BFEFAA912A7B56650038511C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEFAA922A7B56650038511C /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +134,7 @@
 				BF0036382A63EBC400F4D533 /* FirstCeoTests */,
 				BF0036422A63EBC400F4D533 /* FirstCeoUITests */,
 				BF00361D2A63EBC300F4D533 /* Products */,
+				BFEFAA902A7B56650038511C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -301,6 +305,14 @@
 				BFE4F3DA2A7753640053012E /* InsuranceView.swift */,
 			);
 			path = Insurance;
+			sourceTree = "<group>";
+		};
+		BFEFAA902A7B56650038511C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFEFAA912A7B56650038511C /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
