@@ -48,9 +48,15 @@ class InsuranceView: UIView {
     }
     
     private func setImage() {
-        explanationImageView.setImage(named: "explanation.png")
-        categoryImageView.setImage(named: "category.png")
-        rateImageView.setImage(named: "rate.png")
+        explanationImageView.setImage(named: explanationImageName)
+        categoryImageView.setImage(named: categoryImageName)
+        rateImageView.setImage(named: rateImageName)
+    }
+    
+    private func setButton() {
+        calculationButton.roundedNextButton(title: "4대보험 계산하러 가기", titleSize: 16, titleColor: .white, backgroundColor: .pointNavy)
+        calculationButton.addTarget(self, action: #selector(tapCalculationButton), for: .touchUpInside)
+    }
     
     @objc func tapCalculationButton() {
         delegate?.didTapButtonInUIView()
@@ -61,24 +67,22 @@ class InsuranceView: UIView {
         explanationImageView.centerX(inView: self)
         explanationImageView.frame(forAlignmentRect: CGRect(x: 0, y: 0, width: 338, height: 263))
         
-        categoryLabel.anchor(top: explanationImageView.bottomAnchor, leading: self.leadingAnchor, paddingTop: 12)
+        categoryLabel.anchor(top: explanationImageView.bottomAnchor, leading: self.leadingAnchor, paddingTop: 30, paddingLeading: 26)
         
         categoryImageView.anchor(top: categoryLabel.bottomAnchor, paddingTop: 6)
         categoryImageView.setHeight(height: 77)
         categoryImageView.centerX(inView: self)
         
-        rateLabel.anchor(top: categoryImageView.bottomAnchor, leading: self.leadingAnchor)
+        rateLabel.anchor(top: categoryImageView.bottomAnchor, leading: self.leadingAnchor, paddingTop: 30, paddingLeading: 26)
         
-        rateImageView.anchor(top: rateLabel.bottomAnchor)
+        rateImageView.anchor(top: rateLabel.bottomAnchor, leading: self.leadingAnchor, paddingTop: 12, paddingLeading: 26)
         rateImageView.centerX(inView: self)
         rateImageView.setHeight(height: 171)
         
-        calculatorLabel.anchor(top: rateImageView.bottomAnchor, leading: self.leadingAnchor)
+        calculatorLabel.anchor(top: rateImageView.bottomAnchor, leading: self.leadingAnchor, paddingTop: 30, paddingLeading: 26)
         
         calculationButton.makeRounded()
-        calculationButton.roundedNextButton(title: "4대보험 계산하러 가기", titleSize: 16, titleColor: .white, backgroundColor: .pointNavy)
-        
-        calculationButton.anchor(top: calculatorLabel.bottomAnchor)
+        calculationButton.anchor(top: calculatorLabel.bottomAnchor, paddingTop: 12)
         calculationButton.setHeight(height: 54)
         calculationButton.setWidth(width: 354)
         calculationButton.centerX(inView: self)
