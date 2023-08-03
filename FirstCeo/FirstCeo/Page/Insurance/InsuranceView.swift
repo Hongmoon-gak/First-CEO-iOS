@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol CustomViewDelegate: AnyObject {
+    func didTapButtonInUIView()
+}
+
 class InsuranceView: UIView {
+    
+    weak var delegate: CustomViewDelegate?
     
     private var categoryLabel = UILabel()
     private var rateLabel = UILabel()
@@ -24,6 +30,7 @@ class InsuranceView: UIView {
         setLabel()
         setImage()
         [explanationImageView, categoryLabel, categoryImageView, rateLabel, rateImageView, calculatorLabel, calculationButton].forEach { addSubview($0) }
+        setButton()
         configureLayout()
     }
     
@@ -44,6 +51,9 @@ class InsuranceView: UIView {
         explanationImageView.setImage(named: "explanation.png")
         categoryImageView.setImage(named: "category.png")
         rateImageView.setImage(named: "rate.png")
+    
+    @objc func tapCalculationButton() {
+        delegate?.didTapButtonInUIView()
     }
     
     private func configureLayout() {
