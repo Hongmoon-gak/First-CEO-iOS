@@ -22,15 +22,12 @@ class SegmentedControlViewController: UIViewController {
 
         segmentedControl.setBackgroundImage(UIImage(), for: .normal, barMetrics: .default)
         segmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
-        
         segmentedControl.layer.backgroundColor = UIColor.white.cgColor
-
-//        segmentedControl.selectedSegmentIndex = 0
         
-        segmentedControl.setImage(UIImage(named: "insurance-label-selected"), forSegmentAt: 0)
-        segmentedControl.setImage(UIImage(named: "contract-label"), forSegmentAt: 1)
-        segmentedControl.setImage(UIImage(named: "pay-label"), forSegmentAt: 2)
-        segmentedControl.setImage(UIImage(named: "fire-label"), forSegmentAt: 3)
+        segmentedControl.setImage(UIImage(named: insuranceSelectedLabel), forSegmentAt: 0)
+        segmentedControl.setImage(UIImage(named: contractLabel), forSegmentAt: 1)
+        segmentedControl.setImage(UIImage(named: payLabel), forSegmentAt: 2)
+        segmentedControl.setImage(UIImage(named: fireLabel), forSegmentAt: 3)
         
         segmentedControl.addTarget(self, action: #selector(tappedSegmentedControl(_:)), for: .valueChanged)
         
@@ -69,7 +66,6 @@ class SegmentedControlViewController: UIViewController {
     }
     
     private func configureLayout() {
-        
         segmentedControl.centerX(inView: view)
         segmentedControl.anchor(top: view.topAnchor, paddingTop: 100)
         segmentedControl.setHeight(height: 85)
@@ -80,8 +76,6 @@ class SegmentedControlViewController: UIViewController {
         insuranceView.setHeight(height: 1029)
         
         insuranceView.anchor(top: scrollView.contentLayoutGuide.topAnchor, leading: scrollView.contentLayoutGuide.leadingAnchor, bottom: scrollView.contentLayoutGuide.bottomAnchor, trailing: scrollView.contentLayoutGuide.trailingAnchor)
-        
-//        insuranceView.anchor(top: scrollView.topAnchor, leading: scrollView.leadingAnchor, bottom: scrollView.bottomAnchor, trailing: scrollView.trailingAnchor)
     }
     
     @objc func tappedSegmentedControl(_ segmentedControl: UISegmentedControl) {
@@ -89,28 +83,28 @@ class SegmentedControlViewController: UIViewController {
         switch (segmentedControl.selectedSegmentIndex) {
             case 0:
                 insuranceView.isHidden = false
-                segmentedControl.setImage(UIImage(named: "insurance-label-selected"), forSegmentAt: 0)
-                segmentedControl.setImage(UIImage(named: "contract-label"), forSegmentAt: 1)
-                segmentedControl.setImage(UIImage(named: "pay-label"), forSegmentAt: 2)
-                segmentedControl.setImage(UIImage(named: "fire-label"), forSegmentAt: 3)
+                segmentedControl.setImage(UIImage(named: insuranceSelectedLabel), forSegmentAt: 0)
+                segmentedControl.setImage(UIImage(named: contractLabel), forSegmentAt: 1)
+                segmentedControl.setImage(UIImage(named: payLabel), forSegmentAt: 2)
+                segmentedControl.setImage(UIImage(named: fireLabel), forSegmentAt: 3)
                 break
             case 1:
-                segmentedControl.setImage(UIImage(named: "insurance-label"), forSegmentAt: 0)
-                segmentedControl.setImage(UIImage(named: "contract-label-selected"), forSegmentAt: 1)
-                segmentedControl.setImage(UIImage(named: "pay-label"), forSegmentAt: 2)
-                segmentedControl.setImage(UIImage(named: "fire-label"), forSegmentAt: 3)
+                segmentedControl.setImage(UIImage(named: insuranceLabel), forSegmentAt: 0)
+                segmentedControl.setImage(UIImage(named: contractSelectedLabel), forSegmentAt: 1)
+                segmentedControl.setImage(UIImage(named: payLabel), forSegmentAt: 2)
+                segmentedControl.setImage(UIImage(named: fireLabel), forSegmentAt: 3)
                 break
             case 2:
-                segmentedControl.setImage(UIImage(named: "insurance-label"), forSegmentAt: 0)
-                segmentedControl.setImage(UIImage(named: "contract-label"), forSegmentAt: 1)
-                segmentedControl.setImage(UIImage(named: "pay-label-selected"), forSegmentAt: 2)
-                segmentedControl.setImage(UIImage(named: "fire-label"), forSegmentAt: 3)
+                segmentedControl.setImage(UIImage(named: insuranceLabel), forSegmentAt: 0)
+                segmentedControl.setImage(UIImage(named: contractLabel), forSegmentAt: 1)
+                segmentedControl.setImage(UIImage(named: paySelectedLabel), forSegmentAt: 2)
+                segmentedControl.setImage(UIImage(named: fireLabel), forSegmentAt: 3)
                 break
             case 3:
-                segmentedControl.setImage(UIImage(named: "insurance-label"), forSegmentAt: 0)
-                segmentedControl.setImage(UIImage(named: "contract-label"), forSegmentAt: 1)
-                segmentedControl.setImage(UIImage(named: "pay-label"), forSegmentAt: 2)
-                segmentedControl.setImage(UIImage(named: "fire-label-selected"), forSegmentAt: 3)
+                segmentedControl.setImage(UIImage(named: insuranceLabel), forSegmentAt: 0)
+                segmentedControl.setImage(UIImage(named: contractLabel), forSegmentAt: 1)
+                segmentedControl.setImage(UIImage(named: payLabel), forSegmentAt: 2)
+                segmentedControl.setImage(UIImage(named: fireSelectedLabel), forSegmentAt: 3)
                 break
             default:
                 break
