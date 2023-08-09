@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     var informationView = CustomView()
     private lazy var divider = DividerView().drawHorizontalDividerView(height: 7, color: .dividerGraycolor)
     
-    private var helloLabel: UILabel = {
+    private let helloLabel: UILabel = {
        let label = UILabel()
         label.text = "안녕하세요,"
         label.textColor = .black
@@ -26,7 +26,7 @@ class MainViewController: UIViewController {
         return label
     }()
 
-    private var nameLabel = UILabel()
+    private let nameLabel = UILabel()
     
     private lazy var lawCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()

@@ -13,7 +13,7 @@ class SegmentedControlViewController: UIViewController {
     // MARK: - Properties
     var webView = WKWebView()
     
-    private var segmentedControl: UISegmentedControl = {
+    private let segmentedControl: UISegmentedControl = {
         let itemNames = Law.laws.map { $0.name }
         let labeledImages = Law.laws.map { $0.labeledImageName }
         let selectedItemImages = Law.laws.map { $0.selectedImageName }

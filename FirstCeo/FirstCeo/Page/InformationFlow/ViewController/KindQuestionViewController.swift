@@ -38,7 +38,7 @@ final class KindQuestionViewController: UIViewController {
         return collectionView
     }()
     
-    private var nextButton = UIButton()
+    private let nextButton = UIButton()
     
     // MARK: - LifeCycle
     

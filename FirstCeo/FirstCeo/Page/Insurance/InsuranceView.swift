@@ -15,15 +15,15 @@ class InsuranceView: UIView {
     
     weak var delegate: CustomViewDelegate?
     
-    private var categoryLabel = UILabel()
-    private var rateLabel = UILabel()
-    private var calculatorLabel = UILabel()
+    private let categoryLabel = UILabel()
+    private let rateLabel = UILabel()
+    private let calculatorLabel = UILabel()
     
-    private var explanationImageView = UIImageView()
-    private var categoryImageView = UIImageView()
-    private var rateImageView = UIImageView()
+    private let explanationImageView = UIImageView()
+    private let categoryImageView = UIImageView()
+    private let rateImageView = UIImageView()
     
-    private var calculationButton = UIButton()
+    private let calculationButton = UIButton()
     
     override init(frame: CGRect){
         super.init(frame: frame)

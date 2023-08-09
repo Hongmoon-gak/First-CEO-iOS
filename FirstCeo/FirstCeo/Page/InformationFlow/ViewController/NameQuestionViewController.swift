@@ -27,7 +27,7 @@ final class NameQuestionViewController: UIViewController {
         return textField
     }()
     
-    private var nextButton = UIButton()
+    private let nextButton = UIButton()
     
     // MARK: - LifeCycle
     

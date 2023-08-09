@@ -13,7 +13,7 @@ class CustomView: UIView {
     let titleLabel = UILabel()
     let contentLabel = UILabel()
     
-    private var chevronImageView: UIImageView = {
+    private let chevronImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "chevron.right")
         imageView.tintColor = .pointNavy

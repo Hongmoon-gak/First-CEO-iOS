@@ -11,7 +11,7 @@ class CustomHeaderView: UICollectionReusableView {
         
     static let reuseIdentifier = "CustomHeaderView"
     
-    private var titleLabel = UILabel()
+    private let titleLabel = UILabel()
     
     func configureLayout() {
         addSubview(titleLabel)
