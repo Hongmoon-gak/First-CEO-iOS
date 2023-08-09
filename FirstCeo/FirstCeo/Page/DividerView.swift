@@ -11,7 +11,7 @@ class DividerView: UIView {
     func drawHorizontalDividerView(height: CGFloat, color: UIColor) -> UIView {
         let divider = UIView()
         divider.backgroundColor = color
-        divider.setHeight(height: height)
+        divider.setHeight(height)
         return divider
     }
 }

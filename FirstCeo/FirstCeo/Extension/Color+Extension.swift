@@ -40,6 +40,6 @@ extension UIColor {
     }
     
     static var dividerGraycolor: UIColor {
-        return UIColor(rgb: 0xC3C3C3)
+        return UIColor(rgb: 0xE6E6E6)
     }
 }

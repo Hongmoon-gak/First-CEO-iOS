@@ -64,7 +64,7 @@ final class ProfitQuestionViewController: UIViewController {
     }
     
     private func setLabel() {
-        questionLabel.setLabel(labelText: "매출액 규모는 어느정도인가요?", isBold: true, textSize: 24, labelColor: .black)
+        questionLabel.setLabel(labelText: "매출액 규모는 어느정도인가요?", backgroundColor: .clear, weight: .semibold, textSize: 24, labelColor: .black)
     }
     private func configureLayout() {
         progressView.anchor(top: view.topAnchor,
@@ -96,8 +96,8 @@ final class ProfitQuestionViewController: UIViewController {
                           paddingBottom: 32,
                           paddingTrailing: 16)
         
-        progressView.setHeight(height: 16)
-        nextButton.setHeight(height: 72)
+        progressView.setHeight( _: 16)
+        nextButton.setHeight( _: 72)
     }
 }
 

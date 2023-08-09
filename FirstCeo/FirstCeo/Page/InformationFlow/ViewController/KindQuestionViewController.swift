@@ -38,7 +38,7 @@ final class KindQuestionViewController: UIViewController {
         return collectionView
     }()
     
-    private var nextButton = UIButton()
+    private let nextButton = UIButton()
     
     // MARK: - LifeCycle
     
@@ -63,7 +63,7 @@ final class KindQuestionViewController: UIViewController {
     }
     
     private func setLabel() {
-        questionLabel.setLabel(labelText: "어떤 종류의 사업장인가요?", isBold: true, textSize: 24, labelColor: .black)
+        questionLabel.setLabel(labelText: "어떤 종류의 사업장인가요?", backgroundColor: .clear, weight: .semibold, textSize: 24, labelColor: .black)
     }
     private func configureLayout() {
         progressView.anchor(top: view.topAnchor,
@@ -95,8 +95,8 @@ final class KindQuestionViewController: UIViewController {
                           paddingBottom: 32,
                           paddingTrailing: 16)
         
-        progressView.setHeight(height: 16)
-        nextButton.setHeight(height: 72)
+        progressView.setHeight( _: 16)
+        nextButton.setHeight( _: 72)
     }
 }
 

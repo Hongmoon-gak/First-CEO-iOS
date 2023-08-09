@@ -13,7 +13,7 @@ class CustomView: UIView {
     let titleLabel = UILabel()
     let contentLabel = UILabel()
     
-    private var chevronImageView: UIImageView = {
+    private let chevronImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "chevron.right")
         imageView.tintColor = .pointNavy
@@ -52,7 +52,9 @@ class CustomView: UIView {
         backgroundColor = .white
         layer.cornerRadius = 15
         clipsToBounds = true
-        setHeight(height: 175)
+        setHeight( _: 165)
+        
+        self.setShadow(offset: CGSize(), color: .black, radius: 5, opacity: 0.1)
         
         [titleLabel, contentLabel, iconImageView, chevronImageView].forEach { addSubview($0) }
         titleLabel.textColor = .black
@@ -77,7 +79,7 @@ class CustomView: UIView {
                             paddingTop: 5,
                             paddingLeading: 16)
         
-        chevronImageView.setHeight(height: 35)
+        chevronImageView.setHeight( _: 35)
         chevronImageView.anchor(top: self.topAnchor,
                                 trailing: self.trailingAnchor,
                                 paddingTop: (175 - 35) / 2,

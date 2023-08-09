@@ -27,7 +27,7 @@ final class NameQuestionViewController: UIViewController {
         return textField
     }()
     
-    private var nextButton = UIButton()
+    private let nextButton = UIButton()
     
     // MARK: - LifeCycle
     
@@ -43,7 +43,7 @@ final class NameQuestionViewController: UIViewController {
     }
     
     private func setLabel() {
-        questionLabel.setLabel(labelText: "사업장 이름은 무엇인가요?", isBold: true, textSize: 24, labelColor: .black)
+        questionLabel.setLabel(labelText: "사업장 이름은 무엇인가요?", backgroundColor: .clear, weight: .semibold, textSize: 24, labelColor: .black)
     }
     
     @objc func nextButtonTapped() {
@@ -80,9 +80,9 @@ final class NameQuestionViewController: UIViewController {
                           paddingBottom: 32,
                           paddingTrailing: 16)
         
-        nameTextField.setHeight(height: 37)
-        progressView.setHeight(height: 16)
-        nextButton.setHeight(height: 72)
+        nameTextField.setHeight( _: 37)
+        progressView.setHeight( _: 16)
+        nextButton.setHeight( _: 72)
     }
 }
 
