@@ -70,21 +70,21 @@ class InsuranceView: UIView {
         categoryLabel.anchor(top: explanationImageView.bottomAnchor, leading: self.leadingAnchor, paddingTop: 30, paddingLeading: 26)
         
         categoryImageView.anchor(top: categoryLabel.bottomAnchor, paddingTop: 6)
-        categoryImageView.setHeight(height: 77)
+        categoryImageView.setHeight( _: 77)
         categoryImageView.centerX(inView: self)
         
         rateLabel.anchor(top: categoryImageView.bottomAnchor, leading: self.leadingAnchor, paddingTop: 30, paddingLeading: 26)
         
         rateImageView.anchor(top: rateLabel.bottomAnchor, leading: self.leadingAnchor, paddingTop: 12, paddingLeading: 26)
         rateImageView.centerX(inView: self)
-        rateImageView.setHeight(height: 171)
+        rateImageView.setHeight( _: 171)
         
         calculatorLabel.anchor(top: rateImageView.bottomAnchor, leading: self.leadingAnchor, paddingTop: 30, paddingLeading: 26)
         
         calculationButton.makeRounded()
         calculationButton.anchor(top: calculatorLabel.bottomAnchor, paddingTop: 12)
-        calculationButton.setHeight(height: 54)
-        calculationButton.setWidth(width: 354)
+        calculationButton.setHeight( _: 54)
+        calculationButton.setWidth( _: 354)
         calculationButton.centerX(inView: self)
     }
 }

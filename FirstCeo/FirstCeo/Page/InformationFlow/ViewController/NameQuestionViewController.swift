@@ -80,9 +80,9 @@ final class NameQuestionViewController: UIViewController {
                           paddingBottom: 32,
                           paddingTrailing: 16)
         
-        nameTextField.setHeight(height: 37)
-        progressView.setHeight(height: 16)
-        nextButton.setHeight(height: 72)
+        nameTextField.setHeight( _: 37)
+        progressView.setHeight( _: 16)
+        nextButton.setHeight( _: 72)
     }
 }
 

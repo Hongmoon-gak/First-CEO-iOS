@@ -95,8 +95,8 @@ final class KindQuestionViewController: UIViewController {
                           paddingBottom: 32,
                           paddingTrailing: 16)
         
-        progressView.setHeight(height: 16)
-        nextButton.setHeight(height: 72)
+        progressView.setHeight( _: 16)
+        nextButton.setHeight( _: 72)
     }
 }
 

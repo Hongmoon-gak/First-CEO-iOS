@@ -52,7 +52,7 @@ class CustomView: UIView {
         backgroundColor = .white
         layer.cornerRadius = 15
         clipsToBounds = true
-        setHeight(height: 165)
+        setHeight( _: 165)
         
         self.setShadow(offset: CGSize(), color: .black, radius: 5, opacity: 0.1)
         
@@ -79,7 +79,7 @@ class CustomView: UIView {
                             paddingTop: 5,
                             paddingLeading: 16)
         
-        chevronImageView.setHeight(height: 35)
+        chevronImageView.setHeight( _: 35)
         chevronImageView.anchor(top: self.topAnchor,
                                 trailing: self.trailingAnchor,
                                 paddingTop: (175 - 35) / 2,

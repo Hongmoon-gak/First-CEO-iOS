@@ -68,12 +68,12 @@ class SegmentedControlViewController: UIViewController {
     private func configureLayout() {
         segmentedControl.centerX(inView: view)
         segmentedControl.anchor(top: view.topAnchor, paddingTop: 100)
-        segmentedControl.setHeight(height: 85)
+        segmentedControl.setHeight( _: 85)
         
         scrollView.anchor(top: segmentedControl.bottomAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, paddingTop: 12)
         
         insuranceView.anchor(leading: scrollView.frameLayoutGuide.leadingAnchor, trailing: scrollView.frameLayoutGuide.trailingAnchor)
-        insuranceView.setHeight(height: 1029)
+        insuranceView.setHeight( _: 1029)
         
         insuranceView.anchor(top: scrollView.contentLayoutGuide.topAnchor, leading: scrollView.contentLayoutGuide.leadingAnchor, bottom: scrollView.contentLayoutGuide.bottomAnchor, trailing: scrollView.contentLayoutGuide.trailingAnchor)
     }

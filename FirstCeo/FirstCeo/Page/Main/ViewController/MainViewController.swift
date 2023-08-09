@@ -106,7 +106,7 @@ class MainViewController: UIViewController {
                                  paddingTop: 30,
                                  paddingLeading: 16,
                                  paddingTrailing: 16)
-        lawCollectionView.setHeight(height: 200)
+        lawCollectionView.setHeight( _: 200)
     }
     
     private func setLabel() {
